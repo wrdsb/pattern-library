@@ -1,0 +1,500 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>WRDSB Markup Guide</title>
+  <meta name="description" content="WRDSB Pattern Library">
+  <meta name="author" content="Suzanne Carter, WRDSB">
+
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="styles.css">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+
+ <!-- for displaying the code -->
+	<!-- Include EnlighterJS Styles -->
+	<link rel="stylesheet" type="text/css" href="EnlighterJS-master/Build/EnlighterJS.css" />
+	
+	<!-- Include MooTools Framework -->
+	<script type="text/javascript" src="mootools-core-1.4.5-full-nocompat.js"></script>
+
+	<!-- Include EnlighterJS -->
+	<script type="text/javascript" src="EnlighterJS-master/Build/EnlighterJS.js" ></script>
+		
+	<!-- Initialize EnlighterJS -->	
+	<script type="text/javascript">
+		window.addEvent('domready', function() {
+			// highlight all pre tags
+			new EnlighterJS.Helper($$('pre'), {
+				altLines : 'hoverEnabled',
+				indent : 2,
+				editable: false,
+				language: 'js',
+				theme: 'standard',
+				compiler: 'List'
+			});
+			
+		});
+	</script>
+ <!-- end of code display -->
+ 
+ </head>
+
+<body>
+
+<header>
+<h1>WRDSB Pattern Library</h1>
+</header>
+
+<nav id="menu">
+
+<ul>
+	<li><a href="#palette">Palette</a></li>
+	<li><a href="#accessibility">Accessibility</a></li>
+	<li><a href="#text">Text</a></li>
+	<li><a href="#media">Media</a></li>
+	<li><a href="#tabular-data">Tabular Data</a></li>
+	<li><a href="#forms">Forms</a></li>
+	<li><a href="#special-cases">Special Cases</a></li>
+	<li><a href="#widths">Using Width Classes</a></li>
+	<li><a href="#multiple-classes">Using Multiple Classes</a></li>
+	<li><a href="#deprecated">Deprecated</a></li>
+	<li><a href="#references">References</a></li>
+</ul>
+
+</nav>
+
+<section id="content">
+
+<article id="palette">
+
+<h1>Colour Palette</h1>
+
+<h2 id="branding">Branding Colours</h2>
+
+<ul>
+	<li title="blue" style="background-color: #005daa;">#005daa</li>
+	<li title="green" style="background-color: #7ac143;">#7ac143</li>
+</ul>
+
+<h2>Extended Palette Using Branding Colours</h2>
+
+<ul>
+	<li title="blue" style="background-color: #005daa;">#005daa</li>
+	<li title="blue_light" style="background-color: #669ecc;">#669ecc</li>
+	<li title="blue_ultra_light" style="background-color: #b2cee6;">#b2cee6</li>
+	<li title="blue_faint" style="background-color: #e6eff6; color: #666;">#e6eff6</li>
+	<li title="green" style="background-color: #7ac143;">#7ac143</li>
+	<li title="green_light" style="background-color: #a0cf67;">#a0cf67</li>
+	<li title="green_ultra_light" style="background-color: #c6e2a4; color: #666;">#c6e2a4</li>
+	<li title="green_faint" style="background-color: #d9ecc2; color: #666;">#d9ecc2</li>
+</ul>
+
+<h2 id="neutrals">Neutrals</h2>
+
+<ul>
+	<li title="black" style="background-color: #000;">#000</li>
+	<li title="gray_dark" style="background-color: #666;">#666</li>
+	<li title="gray" style="background-color: #ccc;">#ccc</li>
+	<li title="gray_light" style="background-color: #ebebeb; color: #666;">#ebebeb</li>
+	<li title="gray_ultra_light" style="background-color: #f5f5f5; color: #666;">#f5f5f5</li>
+	<li title="white" style="background-color: #fff; color: #666;">#fff</li>
+</ul>
+
+<h2>Highlights, Notes and Alerts Colours</h2>
+
+<p>Used for highlighting, notes and alerts where Branding colours would confuse meaning.</p>
+
+<ul>
+	<li title="yellow" style="background-color: yellow; color: #666;">yellow</li>
+	<li title="yellow_faint" style="background-color: #ffc; color: #666;">#ffc</li>
+	<li title="red" style="background-color: red;">red</li>
+	<li title="pink" style="background-color: pink; color: #666;">pink</li>
+</ul>
+
+<h2>Fonts</h2>
+
+<h3>Body Copy Fonts</h3>
+
+<p style="font-family: Georgia;">The quick brown fox jumped over the lazy dog. Georgia</p>
+<p style="font-family: Georgia;"><strong>The quick brown fox jumped over the lazy dog. Georgia bold</strong></p>
+<p style="font-family: Georgia;"><em>The quick brown fox jumped over the lazy dog. Georgia italic</em></p>
+
+<h3>Heading Fonts</h3>
+
+<p style="font-family: Calibri;">The quick brown fox jumped over the lazy dog. Calibri</p>
+<p style="font-family: Calibri;"><strong>The quick brown fox jumped over the lazy dog. Calibri bold</strong></p>
+<p style="font-family: Calibri;"><em>The quick brown fox jumped over the lazy dog. Calibri italic</em></p>
+
+<h3>Special Cases</h3>
+
+<p style="font-family: Courier, monospace;">The quick brown fox jumped over the lazy dog. Courier, for code samples</p>
+
+</article>
+
+<article id="accessibility">
+
+<h1>Accessibility</h1>
+
+<p>To make our content accessible to everyone, we need to pay special attention to how that content is marked up. This means, in WordPress, using the text editor to add content, and following some simple guidelines (as below).</p>
+
+<h2>Textual Content Markup</h2>
+
+<ul>
+	<li>Use semantic and hierarchical HTML and strategies, such as:
+		<ul>
+			<li><a href="#headings">headings</a> to introduce each content block</li>
+			<li><a href="#lists">lists</a> to create listed items</li>
+			<li><a href="#paragraphs">paragraphs</a> for paragraphs, not line breaks, <code>div</code>s or text without markup</li>
+			<li><a href="#inline">inline elements</a> like <code>strong</code>, <code>em</code>, <code>cite</code>, et cetera, to meaningfully identify text</li>
+			<li>unique, descriptive titles for pages that orient the pages in the site</li>
+			<li>linked text should be descriptive outside of the page context, without verb phrases</li>			
+		</ul>
+	</li>
+	<li><strong>DO NOT</strong> use:
+		<ul>
+			<li><span class="note" title="There are some cases where inline styles are useful, but most cases are already considered, so if you have a new case, please contact ITS Web Team to add it for everyone.">inline styles</span>; use defined classes as outlined in <a href="#special-cases">Special Cases</a></li>
+			<li>nested lists more than three levels deep</li>
+			<li><a href="#deprecated">deprecated markup</a></li>
+			<li>line breaks for formatting paragraphs or lists</li>
+			<li>verb phrases in linked text, including "click here" (see <a href="#references">References</a> for more)</li>
+			<li>colour <em>alone</em> to convey meaning</li>
+		</ul>
+	</li>
+</ul>
+
+<h2>Media (Images, Video, PDF, Files) Content Markup</h2>
+
+<h2>Tabular Data Content Markup</h2>
+
+<h2>Forms Content Markup</h2>
+
+<h2>General Layout and Organizational Requirements</h2>
+
+<ul>
+	<li>unique, descriptive titles for pages that orient the pages in the site</li>
+	<li>meaningful, human-readable URLs</li>
+</ul>
+
+</article>
+
+<article id="text">
+
+<h1>Text</h1>
+
+<p>Most of your content markup will be text and will use these main elements without any special classes or ids.</p>
+
+<h2>Headings</h2>
+
+<blockquote>
+<h1>Heading 1 <code>&lt;h1&gt;&lt;/h1&gt;</code></h1>
+<h2>Heading 2 <code>&lt;h2&gt;&lt;/h2&gt;</code></h2>
+<h3>Heading 3 <code>&lt;h3&gt;&lt;/h3&gt;</code></h3>
+<h4>Heading 4 <code>&lt;h4&gt;&lt;/h4&gt;</code></h4>
+<h5>Heading 5 <code>&lt;h5&gt;&lt;/h5&gt;</code></h5>
+<h6>Heading 6 <code>&lt;h6&gt;&lt;/h6&gt;</code></h6>
+</blockquote>
+
+<h2>Paragraphs and Tags Used With Paragraphs</h2>
+
+<p>Paragraphs are within the <code>&lt;p&gt;&lt;/p&gt;</code> tags. Within a paragraph, you can markup the content by adding <a title="This is the title attribute. It gives context and provides information to alternative readers." href="#">links</a>, citing <cite>Documents</cite>, emphasizing <strong>key</strong> <em>words</em> and adding <code>code</code>. You can also use superscripts<sup>1</sup> and subscripts<sub>2</sub>. If you need more advanced markup, please see the <a href="#references">References</a> provided.</p>
+
+<blockquote>
+<p>Paragraph tag: <code>&lt;p&gt;&lt;/p&gt;</code><br />
+Hyperlink tag: <code>&lt;a title="If the link doesn't contain the Title of the Linked-to Page, you must put it here to make the link accessible." href="http://somelink.com/"&gt;Title of Linked-to Page&lt;/a&gt;</code><br />
+Cite tag: <code>&lt;cite&gt;&lt;/cite&gt;</code><br />
+Strong emphasis tag: <code>&lt;strong&gt;&lt;/strong&gt;</code><br />
+Stress emphasis tag: <code>&lt;em&gt;&lt;/em&gt;</code><br />
+Code tag: <code>&lt;code&gt;&lt;/code&gt;</code><br />
+Superscript tag: <code>&lt;sup&gt;&lt;/sup&gt;</code><br />
+Subscript tag: <code>&lt;sub&gt;&lt;/sub&gt;</code><br />
+Line break tag: <code>&lt;br&gt;</code><br />
+Prevent word break tag: <code data-enlighter-language="js">&lt;wbr&gt;</code> (Sample: <code>Goes&lt;wbr&gt;between&lt;wbr&gt;words</code> when you don't want a line-break to separate them. Use sparingly!)</p>
+</blockquote>
+
+<h2>Lists</h2>
+
+<h3>Ordered Lists</h3>
+
+<p>For use when the items need to be ordered. Our default is <code>list-style-type: decimal;</code>, but we can create other versions if needed.</p>
+
+<ol>
+	<li>decimal (1, 2, 3...)</li>
+	<li>decimal-leading-zero (01, 02, 03...)</li>
+	<li>lower-alpha (a, b, c...)</li>
+	<li>lower-roman (i, ii, iii...)</li>
+	<li>upper-alpha (A, B, C...)</li>
+	<li>upper-roman (I, II, III...)</li>
+</ol>
+
+<pre class="quarter">
+&lt;ol>
+	&lt;li>list item&lt;/li>
+	&lt;li>list item&lt;/li>
+	&lt;li>list item&lt;/li>
+&lt;/ol>
+</pre>
+
+<h3>Unordered Lists</h3>
+
+<p>For use when the items do not need to be ordered. Our default is <code>list-style-type: square;</code>, but we can create other versions if needed.</p>
+
+<ul>
+	<li style="list-style-type: square;">square</li>
+	<li style="list-style-type: disc;">disc</li>
+	<li style="list-style-type: circle;">circle</li>
+	<li style="list-style-type: none;">none</li>
+</ul>
+
+<pre>
+&lt;ul>
+	&lt;li>list item&lt;/li>
+	&lt;li>list item&lt;/li>
+	&lt;li>list item&lt;/li>
+&lt;/ul>
+</pre>
+
+<h3>Definition Lists</h3>
+
+<dl class="half">
+	<dt>Term</dt>
+	<dd>Definition or description of the term.</dd>
+	<dt>Definition Lists</dt>
+	<dd>A definition list is a list of terms and corresponding definitions. Definition lists are typically formatted with the term on the left with the definition following on the right or on the next line. The definition text is typically indented with respect to the term.</dd>
+	<dt>Usage</dt>
+	<dd>Since the term and the definition/description are closely linked, this helps alternative readers understand the relationship between the term and its definition/description.</dd>
+</dl>
+
+<pre>
+&lt;dl>
+	&lt;dt>Term&lt;/dt>
+	&lt;dd>Definition or description of the term.&lt;/dd>
+	&lt;dt>Definition Lists&lt;/dt>
+	&lt;dd>A definition list is a list of terms [...]&lt;/dd>
+	&lt;dt>Usage&lt;/dt>
+	&lt;dd>Since the term and the definition [...]&lt;/dd>
+&lt;/dl>
+</pre>
+
+</article>
+
+<article id="widths">
+
+<h1>Using Width Classes</h1>
+
+<p>There are a number of custom widths already set for your use. You can use them with any block-level element, such as <code>div, p, aside, table, ul, ol, dl</code>.</p>
+
+<p>The only thing that these classes effect is the width. The rest of the styling is applied to the element or other classes listed.</p>
+
+<div class="sample quarter">
+<code>class="quarter"</code>
+</div>
+
+<div class="sample half">
+<code>class="half"</code>
+</div>
+
+<div class="sample threequarters">
+<code>class="threequarters"</code>
+</div>
+
+<div class="sample full">
+<code>class="full"</code>
+</div>
+
+</article>
+
+<article id="media">
+
+<h1>Media</h1>
+
+</article>
+
+<article id="tabular-data">
+
+<h1>Tabular Data</h1>
+
+<table>
+	<caption>This is a table for data you'd normally find in a spreadsheet. The table element is not used for page layout purposes.</caption>
+	<thead>
+		<tr>
+			<th>Column Heading</th>
+			<th>Column Heading</th>
+			<th>Column Heading</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Description</td>
+			<td>Qualifier</td>
+			<td>$52.60</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Qualifier</td>
+			<td>$52.60</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>Qualifier</td>
+			<td>$52.60</td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td>Summary</td>
+			<td>Totals</td>
+			<td>$157.80</td>
+		</tr>
+	</tfoot>
+</table>
+
+<pre>
+&lt;table>
+	&lt;caption>This is a table for data you'd normally find in a spreadsheet.
+	The table element is not used for page layout purposes.&lt;/caption>
+	&lt;thead>
+		&lt;tr>
+			&lt;th>Column Heading&lt;/th>
+			&lt;th>Column Heading&lt;/th>
+			&lt;th>Column Heading&lt;/th>
+		&lt;/tr>
+	&lt;/thead>
+	&lt;tbody>
+		&lt;tr>
+			&lt;td>Description&lt;/td>
+			&lt;td>Qualifier&lt;/td>
+			&lt;td>$52.60&lt;/td>
+		&lt;/tr>
+		&lt;tr>
+			&lt;td>Description&lt;/td>
+			&lt;td>Qualifier&lt;/td>
+			&lt;td>$52.60&lt;/td>
+		&lt;/tr>
+		&lt;tr>
+			&lt;td>Description&lt;/td>
+			&lt;td>Qualifier&lt;/td>
+			&lt;td>$52.60&lt;/td>
+		&lt;/tr>
+	&lt;/tbody>
+	&lt;tfoot>
+		&lt;tr>
+			&lt;td>Summary&lt;/td>
+			&lt;td>Totals&lt;/td>
+			&lt;td>$157.80&lt;/td>
+		&lt;/tr>
+	&lt;/tfoot>
+&lt;/table>
+</pre>
+
+</article>
+
+<article id="forms">
+
+<h1>Forms</h1>
+
+</article>
+
+<article id="special-cases">
+
+<h1>Special Cases</h1>
+
+<h2>Blockquotes</h2>
+
+<blockquote>
+
+<p><code>&lt;blockquote&gt;</code><code>&lt;/blockquote&gt;</code> is used to offset and style large quotations, just as in traditional publishing.</p>
+
+</blockquote>
+
+<h2>Asides</h2>
+
+<aside class="note half right">
+<p>This is an aside for a note aligned right, set to half-width. Did you know that Lorus Ipsum has been used for typesetting since the 1500s?</p>
+<p><code>&lt;aside class="note half right"&gt;<br />
+&lt;/aside&gt;</code></p>
+<p class="reference"><a href="mailto:suzanne_carter@wrdsb.on.ca">Suzanne</a> ZC, ITS</p>
+</aside>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<aside class="alert quarter left">
+<p>This is an aside for an alert aligned left and 1/4 the width of the page.</p>
+<p><code>&lt;aside class="alert quarter left"&gt;<br />
+&lt;/aside&gt;</code></p>
+</aside>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<aside class="announcement full center">
+<h1>Announcement</h1>
+<p>This is an aside for an announcement centered, full width, where there is a need to highlight information that expires.</p>
+</aside>
+
+<pre>
+&lt;aside class="announcement full center"&gt;
+&lt;h1>Announcement&lt;/h1>
+&lt;p>Details of announcement.&lt;/p>
+&lt;/aside&gt;</pre>
+
+</article>
+
+<article id="multiple-classes">
+
+<h1>Using Multiple Classes</h1>
+
+<p>You can list more than one class name in the <code>class</code> attribute of any element. This allows you to add multiple conditions to your element.</p>
+
+<pre>
+&lt;aside class="note quarter center">
+&lt;p>This is an aside with the classes <code>note, quarter, center</code> applied.&lt;/p>
+&lt;/aside>
+</pre>
+
+<aside class="note quarter center">
+<p>This is an aside with the classes <code>note, quarter, center</code> applied.</p>
+</aside>
+
+
+</article>
+
+<article id="deprecated">
+
+<h1>Deprecated Tags (please do not use)</h1>
+
+<p>Instead of a horizontal line, which is created with this tag: <code>&lt;hr&gt;</code>, please use the logical heading element for the content ( <code>&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, &lt;h6&gt;</code>) instead, to convey semantic meaning.</p>
+
+</article>
+
+</section>
+
+<section id="references">
+
+<h1>References</h1>
+
+<ul>
+	<li>Mozilla's full list of <a href="https://developer.mozilla.org/en/docs/Web/Guide/HTML/HTML5/HTML5_element_list">HTML5 elements</a></li>
+	<li><a href="https://drive.google.com/a/googleapps.wrdsb.ca/file/d/0B_KvCHXJzw-6dDBoRW5iajRJV1U/edit?usp=sharing">WRDSB Visual Identity Guidelines</a></li>
+	<li>W3C's Web Accessibility Initiative (WAI) <a href="http://www.w3.org/WAI/intro/wcag">Web Content Accessibility Guidelines (WCAG) Overview</a></li>
+	<li>W3C Quality Assurance Tips for Webmasters: <a href="http://www.w3.org/QA/Tips/noClickHere">Don't use "click here" as link text</a></li>
+</ul>
+
+</section>
+
+<footer>
+<address>WRDSB<br>
+51 Ardelt<br>
+<a href="suzanne_carter@wrdsb.on.ca">Contact Suzanne Carter, ITS, for help or feedback.</a><br>
+April, 2014
+</address>
+</footer>
+
+</body>
+</html>

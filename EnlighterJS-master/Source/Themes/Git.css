@@ -1,0 +1,61 @@
+/*
+---
+description: GitHub inspired theme.
+
+license: MIT-style
+
+authors:
+- Jose Prado
+- Andi Dittrich
+
+...
+*/
+
+/* borders on top&botton */
+.gitEnlighterJS {
+	border-bottom: 1px solid #eee;
+	border-top: 1px solid #eee; 
+	font-family: Courier, monospace;
+}
+
+/* no line borders */
+ol.gitEnlighterJS li{
+	border: none;
+	line-height: 20px;
+}
+
+/* hover color */
+ol.gitEnlighterJS li.hoverEnabled:hover{
+	background-color: #ffffcc;
+	border: none;
+}
+
+/* special line highlight color */
+ol.gitEnlighterJS li.specialline {
+	background-color: #fffff2;
+}
+
+/* non leading zero */
+ol.gitEnlighterJS {
+	list-style-type: decimal;
+}
+
+/** Symbol styles */
+.gitEnlighterJS .de1 { color: #CF6A4C; }
+.gitEnlighterJS .de2 { color: #CF6A4C; }
+.gitEnlighterJS .kw1 { color: #000; font-weight: bold; }
+.gitEnlighterJS .kw2 { color: #0086b3; }
+.gitEnlighterJS .kw3 { color: #445588; font-weight: bold; }
+.gitEnlighterJS .kw4 { color: #990073; }
+.gitEnlighterJS .co1 { color: #999988; font-style: italic; }
+.gitEnlighterJS .co2 { color: #999988; font-style: italic; }
+.gitEnlighterJS .st0 { color: #dd1144; }
+.gitEnlighterJS .st1 { color: #dd1144; }
+.gitEnlighterJS .st2 { color: #dd1144; }
+.gitEnlighterJS .nu0 { color: #009999; }
+.gitEnlighterJS .me0 { color: #0086b3; }
+.gitEnlighterJS .me1 { color: #0086b3; }
+.gitEnlighterJS .br0 { color: #777; }
+.gitEnlighterJS .sy0 { color: #777; }
+.gitEnlighterJS .es0 { color: #777; }
+.gitEnlighterJS .re0 { color: #009926; }

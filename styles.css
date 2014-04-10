@@ -1,0 +1,542 @@
+/*-----------------------------------------------------------------------------
+
+	* Filename:          styles.css
+	* Description:       Markup CSS
+	* Version:           1.0.0 (2014-04-09)
+	* Website:           http://staff.wrdsb.ca/wordpress/
+	* Author:            Suzanne Carter, ITS, WRDSB
+	* License:           none (public domain)
+
+	== STRUCTURE ==========================================================
+	
+	* Page width:        960px
+	* Columns:           1
+	
+	$__breakpoints       Breakpoint Styles
+	$__colours           Colour Palette
+		$__hex               Hex Values of Colours
+	$__structure         Main Structural Styles
+	$__content           Content Styles
+		$__inline            Inline level elements
+		$__block             Block level elements
+			$__lists             Lists
+			$__headings          Headings
+			$__tables            Tables
+			$__special           Special Classes for Content
+		$__images            Images
+	$__widths            Width Classes
+	$__demo              For demonstration only
+	
+-----------------------------------------------------------------------------*/
+
+/*** __breakpoints  ***/
+
+
+/*** __colours ***/
+
+	/** __hex
+
+	$__blue               #005daa
+	$__blue_light         #669ecc
+	$__blue_ultra_light   #b2cee6
+	$__blue_faint         #e6eff6
+
+	$__green              #7ac143
+	$__green_light        #a0cf67
+	$__green_ultra_light  #c6e2a4
+	$__green_faint        #d9ecc2
+
+	$__black              #000
+	$__gray_dark          #666
+	$__gray               #ccc
+	$__gray_light         #ebebeb
+	$__gray_ultra_light   #f5f5f5
+	$__white              #fff
+
+	$__yellow             yellow
+	$__yellow_faint       #ffc
+	$__red                red
+	$__pink               pink
+
+	*/
+
+#palette ul {
+	margin: auto;
+	padding: 2.5em 0;
+}
+
+#palette ul li {
+	border: 1px solid #eee;
+	padding: .5em;
+	display: inline;
+	width: 4em;
+	height: 4em;
+	color: #fff;
+}
+
+#palette p {
+	
+}
+
+/*** __structure ***/
+
+body {
+	/*font-family: Calibri, "Helvetica Neue", Arial, sans-serif;*/
+	font-family: Georgia, serif;
+	font-size: 13px;
+}
+
+header {
+	background-image: url(wrdsb_header.png); /* 960px */
+	background-repeat: no-repeat;
+	max-width: 960px;
+	height: 226px;
+	text-align: center;
+	font-size: 3em;
+	font-weight: bold;
+	margin: 0 auto;
+	}
+
+footer {
+	background-image: url(wrdsb_footer.png); /* 960px */
+	background-repeat: no-repeat;
+	max-width: 960px;
+	height: 198px;
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: bold;
+	margin: 0 auto;
+}
+
+nav {
+	max-width: 20em;
+	position: fixed;
+	top: 20em;
+	background-color: #d9ecc2;
+	margin: 0 auto 2.5em auto;
+	padding: 0 1.5em;
+	font-family: Calibri, "Helvetica Neue", Arial, sans-serif;
+	z-index: 500;
+}
+
+nav ul {
+	margin: auto;
+	padding: 0;
+}
+
+nav ul li {
+	display: block;
+	border-bottom: 1px solid #7ac143;
+}
+
+nav ul li:last-child {
+	border-bottom: 0;
+}
+
+nav ul li:hover {
+	background-color: #c6e2a4;
+	border-bottom: 1px solid #a0cf67;
+}
+
+nav ul li:last-child:hover {
+	border-bottom: 0;
+}
+
+nav ul li a {
+	padding: 0 .5em;
+	font-size: .9em;
+	text-decoration: none;
+	width: 200px;
+}
+
+section {
+	max-width: 960px;
+	margin: auto;
+	padding: 0 2.5em;
+}
+
+article {
+	max-width: 960px;
+	margin: 1.5em auto;
+	padding: 1.5em;
+	border: 1px dotted #999;
+}
+
+/*** __content ***/
+
+	/** __inline **/
+
+	a {
+		color: #005daa;
+	}
+
+	a:visited {
+		color: #669ecc;
+	}
+	
+	strong {
+		font-weight: bold;
+	}
+
+	em {
+		font-style: italic;
+	}
+
+	code {
+		font-family: courier, monospace;
+		font-weight: normal;
+	}
+
+	cite {
+		font-style: italic;
+		background-color: #b2cee6;
+	}
+
+	sup {
+		vertical-align: super;
+		font-size: .5em;
+	}
+
+	sub {
+		vertical-align: sub;
+		font-size: .5em;
+	}
+
+	/** __block **/
+		
+	p {
+		font-size: 1.5em;
+		padding: 1.3em 0 0 0;
+		line-height: 1.5em;
+	}
+
+	pre {
+		font-size: 1em;
+		padding: 1.3em;
+		line-height: 1.5em;
+		background-color: #f5f5f5;
+		border: 1px solid #ccc;
+		margin: 3em;
+	}
+
+	blockquote {
+		margin: 5em;
+		border-left: 3px solid #ccc;
+		padding: 1.5em;
+	}
+
+	address {
+		font-size: .8em;
+		font-weight: normal;
+		text-align: left;
+		padding-top: 8em;
+		width: 25em;
+		margin: auto;
+		font-family: Calibri, sans-serif;
+	}
+
+	aside {
+		padding: 0 1.3em 1.3em 1.3em;
+	}
+
+	aside p {
+		font-size: 1.3em;
+	}
+
+	/** _lists **/
+
+	li {
+		font-size: 1.5em;
+		padding: 0 0 0 0;
+		line-height: 1.5em;
+	}
+
+	ol {
+		/* decimal, lower-alpha, lower-roman, upper-alpha, upper-roman */
+		list-style-type: decimal;
+		padding-left: 5em;
+		padding-top: 1.5em;
+	}
+
+	ul {
+		/* square, disc, circle, none */
+		list-style-type: square; 
+		padding-left: 5em;
+		padding-top: 1.5em;
+	}
+
+	li ul li, li ol li {
+		font-size: 1em;
+	}
+
+	li ul, li ol {
+		padding-top: 0;
+		padding-left: 0;
+	}
+
+	ol li ol {
+		/* decimal, lower-alpha, lower-roman, upper-alpha, upper-roman */
+		list-style-type: lower-alpha;
+		padding-left: 1.5em;
+	}
+
+	ol li ol li ol {
+		/* decimal, lower-alpha, lower-roman, upper-alpha, upper-roman */
+		list-style-type: lower-roman;
+		padding-left: 1.5em;
+	}
+
+	ul li ul {
+		/* square, disc, circle, none */
+		list-style-type: circle; 
+		padding-left: 1.5em;
+	}
+
+	ul li ul li ul {
+		/* square, disc, circle, none */
+		list-style-type: disc; 
+		padding-left: 1.5em;
+	}
+
+	dl {
+		padding-left: 5em;
+		padding-top: 1.5em;
+	}
+
+	dt {
+		font-weight: bold;
+		font-size: 1.5em;
+		padding: 1em 0 0 0;
+	}
+
+	dd {
+		font-size: 1.3em;
+		padding: 1em 0 0 2.5em;
+		line-height: 150%;
+	}
+
+	/** __headings **/
+
+	h1, h2, h3, h4, h5, h6 {
+		margin-top: 1.3em;
+		font-weight: bold;
+		font-family: Calibri, sans-serif;
+	}
+
+	h1 {
+		font-size: 2.3em;
+	}
+
+	header h1 {
+		position: relative;
+		top: 3em;
+		left: 1em;
+		font-size: 1em;
+		border-bottom: 0;
+	}
+
+	.announcement h1 {
+		padding-top: .5em;
+		padding-bottom: 0;
+		font-size: 2em;
+	}
+		
+	h2 {
+		font-size: 2.1em;
+		border-left: 0 /*.8em solid #005daa */;
+		/*background-color: #b2cee6;
+		padding: .4em .8em;*/
+		border-top: 1px solid #b2cee6;
+		border-left: 1px solid #b2cee6;
+		padding-top: .4em;
+		padding-left: .4em;
+		color: #005daa;
+		-webkit-box-shadow: -4px -4px 10px 0px rgba(224, 224, 224, 0.75);
+		-moz-box-shadow:    -4px -4px 10px 0px rgba(224, 224, 224, 0.75);
+		box-shadow:         -4px -4px 10px 0px rgba(224, 224, 224, 0.75);
+		-webkit-border-top-left-radius: .2em;
+		-moz-border-radius-topleft: .2em;
+		border-top-left-radius: .2em;
+	}
+
+	h3 {
+		font-size: 1.9em;
+		border-left: .8em solid #005daa;
+		background-color: #eee;
+		padding: .4em .8em;
+	}
+
+	h4 {
+		font-size: 1.7em;
+		border-left: .8em solid #b2cee6;
+		background-color: #eee;
+		padding: .4em .8em;
+	}
+
+	h5 {
+		font-size: 1.5em;
+		border-left: .8em solid #a0cf67;
+		background-color: #eee;
+		padding: .4em .8em;
+	}
+
+	h6 {
+		font-size: 1.3em;
+		color: #000;
+		border-bottom: 1px solid #000;
+	}
+
+	/** _tables **/
+
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+		border: 1px solid #000;
+	}
+
+	tr {
+		background-color: #f5f5f5;
+	}
+
+	tr:hover {
+		background-color: #d9ecc2;
+	}
+
+	tr:nth-child(even) {
+		background-color: #e6eff6;
+	}
+
+	tr:nth-child(even):hover {
+		background-color: #d9ecc2;
+	}
+
+	th, td {
+		vertical-align: top;
+		padding: 1em;
+		border-collapse: collapse;
+		border: 1px solid #666;
+		color: #000;
+	}
+
+	th {
+		font-weight: bold;
+		text-align: center;
+		font-size: 1.4em;
+		background-color: #669ecc;
+		color: #fff;
+	}
+
+	tfoot td {
+		font-weight: bold;
+		font-size: 1.4em;
+		background-color: #eee;
+		color: #000;
+	}
+
+	caption {
+		font-size: 1.2em;
+		text-align: left;
+		padding: 1em 0;
+	}
+
+/*** __special ***/
+
+.left {
+	float: left;
+	margin: 1.5em 1.5em 1.5em 0;
+}
+
+.right {
+	float: right;
+	margin: 1.5em 0 1.5em 1.5em;
+}
+
+.center {
+	margin: 1.5em auto;
+}
+
+.alert {
+	background-color: #ff0;
+	border: 3px solid red;
+	color: #000;
+	font-weight: bold;
+	-webkit-box-shadow: 4px 4px 13px 0px rgba(255, 0, 0, 0.3);
+	-moz-box-shadow:    4px 4px 13px 0px rgba(255, 0, 0, 0.3);
+	box-shadow:         4px 4px 13px 0px rgba(255, 0, 0, 0.3);
+}
+
+.note {
+	background-color: #ffc;
+	border: 3px dashed #eee;
+	color: #666;
+	font-weight: normal;
+	font-style: italic;
+	-webkit-border-radius: 1.2em;
+	-moz-border-radius: 1.2em;
+	border-radius: 1.2em;
+	-webkit-box-shadow: 4px 4px 13px 0px rgba(50, 50, 50, 0.3);
+	-moz-box-shadow:    4px 4px 13px 0px rgba(50, 50, 50, 0.3);
+	box-shadow:         4px 4px 13px 0px rgba(50, 50, 50, 0.3);
+}
+
+span.note {
+	background-color: #ffc;
+	border: 0;
+	color: #000;
+	font-weight: normal;
+	font-style: normal;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	-webkit-box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.0);
+	-moz-box-shadow:    0px 0px 0px 0px rgba(255, 255, 255, 0.0);
+	box-shadow:         0px 0px 0px 0px rgba(255, 255, 255, 0.0);
+}
+
+.announcement { /* for special announcements that expire */
+	background-color: #d9ecc2;
+	border: 5px solid #a0cf67;
+	color: #000;
+}
+
+p.reference { /* for quotations and references */
+	text-align: right;
+}
+
+p.reference:before {
+	content: "~ ";
+}
+
+/*** __widths ***/
+
+.quarter {
+	width: 16.96em;
+}
+
+.half {
+	width: 33.92em;
+}
+
+.threequarters {
+	width: 50.88em;
+}
+
+.full {
+	width: 67.84em;
+}
+
+/*** __demo ***/
+
+.sample {
+	height: 1.5em;
+	border: 5px solid pink; /* for lynsey (couldn't quite get the tartan) */
+	background-color: #eee;
+	margin-top: 1.5em;
+	padding: 1em;
+	-webkit-border-radius: 1.2em;
+	-moz-border-radius: 1.2em;
+	border-radius: 1.2em;
+	-webkit-box-shadow: 4px 4px 13px 0px rgba(50, 50, 50, 0.3);
+	-moz-box-shadow:    4px 4px 13px 0px rgba(50, 50, 50, 0.3);
+	box-shadow:         4px 4px 13px 0px rgba(50, 50, 50, 0.3);
+}

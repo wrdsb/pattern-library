@@ -1,0 +1,41 @@
+/*
+---
+description: Panic Coda inspired theme.
+
+license: MIT-style
+
+authors:
+- Jose Prado
+- Andi Dittrich
+
+...
+*/
+.panicEnlighterJSTabPane .controls li{
+	background-color: #f2f2f2;
+}
+.panicEnlighterJSTabPane .controls li:hover{
+	background-color: #e5e5e5;
+}
+.panicEnlighterJSTabPane .controls .selected, .panicEnlighterJSTabPane .controls .selected:hover{
+	background-color: #E4F8FC;
+}
+
+/** Symbol styles */
+.panicEnlighterJS .de1 { color: #A00083; }
+.panicEnlighterJS .de2 { color: #A00083; }
+.panicEnlighterJS .kw1 { color: #9F0050; }
+.panicEnlighterJS .kw2 { color: #9F0050; }
+.panicEnlighterJS .kw3 { color: #9a6c00; }
+.panicEnlighterJS .kw4 { color: #9F0050; }
+.panicEnlighterJS .co1 { color: #00721F; font-style: italic; }
+.panicEnlighterJS .co2 { color: #00721F; font-style: italic; }
+.panicEnlighterJS .st0 { color: #EF7300; }
+.panicEnlighterJS .st1 { color: #8A000F; }
+.panicEnlighterJS .st2 { color: #8A000F; }
+.panicEnlighterJS .nu0 { color: #1600FF; }
+.panicEnlighterJS .me0 { color: #00417f; }
+.panicEnlighterJS .me1 { color: #00417f; }
+.panicEnlighterJS .br0 { color: #000; }
+.panicEnlighterJS .sy0 { color: #000; }
+.panicEnlighterJS .es0 { color: #000; }
+.panicEnlighterJS .re0 { color: #8A000F; }

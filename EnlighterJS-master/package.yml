@@ -1,0 +1,7 @@
+# Forge
+name: EnlighterJS
+author: andidittrich
+category: Interface
+tags: [parser, syntax highlighter]
+demo: http://static.andidittrich.de/EnlighterJS/Demo.html
+current: v1.8

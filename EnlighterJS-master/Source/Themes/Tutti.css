@@ -1,0 +1,62 @@
+/*
+---
+description: MacRabbit Espresso inspired theme.
+
+license: MIT-style
+
+authors:
+- Jose Prado
+- Andi Dittrich
+
+...
+*/
+.tuttiEnlighterJSTabPane .controls li{
+	background-color: #ffffff;
+}
+.tuttiEnlighterJSTabPane .controls .selected, .tuttiEnlighterJSTabPane .controls .selected:hover, .tuttiEnlighterJSTabPane .controls li:hover{
+	background-color: #F4F8FC;
+}
+
+.tuttiEnlighterJS {
+	color: #000000;
+}
+ol.tuttiEnlighterJS {
+	background-color: #fbfbfb;
+	list-style-type: decimal;
+}
+
+ol.tuttiEnlighterJS li{
+	border: none;
+	line-height: 16px;
+}
+ol.tuttiEnlighterJS li:hover{
+	color: #000000;
+}
+ol.tuttiEnlighterJS li.hoverEnabled:hover{
+	background-color: #F4F8FC;
+	border: none;
+}
+/* special line highlight color */
+ol.tuttiEnlighterJS li.specialline {
+	background-color: #F4F8FC;
+}
+
+/** Symbol styles */
+.tuttiEnlighterJS .de1 { color: #6eb13f; }
+.tuttiEnlighterJS .de2 { color: #6eb13f; }
+.tuttiEnlighterJS .kw1 { color: #8600c9; }
+.tuttiEnlighterJS .kw2 { color: #3a1d72; font-weight: bold; }
+.tuttiEnlighterJS .kw3 { color: #4F9FCF; }
+.tuttiEnlighterJS .kw4 { color: #4F9FCF; }
+.tuttiEnlighterJS .co1 { color: #bbb; }
+.tuttiEnlighterJS .co2 { color: #bbb; }
+.tuttiEnlighterJS .st0 { color: #bc670f; background-color: rgba(251,233,173,0.1);}
+.tuttiEnlighterJS .st1 { color: #bc670f; background-color: rgba(251,233,173,0.1);}
+.tuttiEnlighterJS .st2 { color: #bc670f; background-color: rgba(251,233,173,0.1);}
+.tuttiEnlighterJS .nu0 { color: #6700b9; }
+.tuttiEnlighterJS .me0 { color: #000; }
+.tuttiEnlighterJS .me1 { color: #6eb13f; font-weight: bold; }
+.tuttiEnlighterJS .br0 { color: #4f4f4f; }
+.tuttiEnlighterJS .sy0 { color: #626fc9; }
+.tuttiEnlighterJS .es0 { color: #4f4f4f; }
+.tuttiEnlighterJS .re0 { color: #d44950; }
