@@ -81,8 +81,8 @@
 /*** __structure ***/
 
 body {
-	/*font-family: Calibri, "Helvetica Neue", Arial, sans-serif;*/
-	font-family: Georgia, serif;
+	font-family: Calibri, "Helvetica Neue", Arial, sans-serif;
+	/* font-family: Georgia, serif; */
 	font-size: 13px;
 }
 
@@ -299,28 +299,46 @@ article {
 	}
 
 	dl {
-		padding-left: 5em;
-		padding-top: 1.5em;
+		line-height: 150%;
+		margin-top: 0;
+		margin-bottom: 20px;
 	}
 
 	dt {
 		font-weight: bold;
-		font-size: 1.5em;
-		padding: 1em 0 0 0;
+		font-size: 1.3em;
+		line-height: 150%;
 	}
 
 	dd {
 		font-size: 1.3em;
-		padding: 1em 0 0 2.5em;
 		line-height: 150%;
+		margin-left: 0;
+		margin-bottom: 1.5em;
 	}
 
+	@media (min-width: 768px) {
+		dt {
+			float: left;
+			width: 160px;
+			overflow: hidden;
+			clear: left;
+			text-align: right;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			}
+		dd {
+			margin-left: 180px;
+		}
+	}
+
+	
 	/** __headings **/
 
 	h1, h2, h3, h4, h5, h6 {
 		margin-top: 1.3em;
 		font-weight: bold;
-		font-family: Calibri, sans-serif;
+		font-family: Georgia, serif;
 	}
 
 	h1 {
@@ -351,9 +369,9 @@ article {
 		padding-top: .4em;
 		padding-left: .4em;
 		color: #005daa;
-		-webkit-box-shadow: -4px -4px 10px 0px rgba(224, 224, 224, 0.75);
-		-moz-box-shadow:    -4px -4px 10px 0px rgba(224, 224, 224, 0.75);
-		box-shadow:         -4px -4px 10px 0px rgba(224, 224, 224, 0.75);
+		-webkit-box-shadow: -4px -4px 10px 0 rgba(224, 224, 224, 0.75);
+		-moz-box-shadow:    -4px -4px 10px 0 rgba(224, 224, 224, 0.75);
+		box-shadow:         -4px -4px 10px 0 rgba(224, 224, 224, 0.75);
 		-webkit-border-top-left-radius: .2em;
 		-moz-border-radius-topleft: .2em;
 		border-top-left-radius: .2em;
@@ -386,51 +404,58 @@ article {
 		border-bottom: 1px solid #000;
 	}
 
-	/** _tables **/
+	/** __tables **/
+	/* .table-striped and .table-hover combined and adapted for the WRDSB */
+	/* .table-responsive needs to be in a wrapping div applied to all tables */
 
 	table {
 		border-collapse: collapse;
 		border-spacing: 0;
-		border: 1px solid #000;
+		border-bottom: 1px solid #eee;
 	}
 
 	tr {
-		background-color: #f5f5f5;
+		background-color: #fff;
 	}
 
 	tr:hover {
 		background-color: #d9ecc2;
 	}
 
-	tr:nth-child(even) {
-		background-color: #e6eff6;
+	tbody > tr:nth-child(odd) {
+		background-color: #f9f9f9;
 	}
 
-	tr:nth-child(even):hover {
+	tbody > tr:nth-child(odd):hover {
 		background-color: #d9ecc2;
 	}
 
 	th, td {
 		vertical-align: top;
-		padding: 1em;
+		padding: 1.1em;
 		border-collapse: collapse;
-		border: 1px solid #666;
+		border-bottom: 1px solid #eee;
 		color: #000;
 	}
 
 	th {
 		font-weight: bold;
 		text-align: center;
-		font-size: 1.4em;
-		background-color: #669ecc;
-		color: #fff;
+		font-size: 1.2em;
+		background-color: #e6eff6;
+		color: #666;
 	}
 
-	tfoot td {
+	tfoot > tr > td {
 		font-weight: bold;
-		font-size: 1.4em;
+		font-size: 1.2em;
 		background-color: #eee;
-		color: #000;
+		color: #666;
+		border-top: 2px solid #ccc;
+	}
+	
+	thead > tr > th {
+		border-bottom: 2px solid #b3cee6;
 	}
 
 	caption {
@@ -441,17 +466,17 @@ article {
 
 /*** __special ***/
 
-.left {
+.left, .alignleft {
 	float: left;
 	margin: 1.5em 1.5em 1.5em 0;
 }
 
-.right {
+.right, alignright {
 	float: right;
 	margin: 1.5em 0 1.5em 1.5em;
 }
 
-.center {
+.center, aligncenter {
 	margin: 1.5em auto;
 }
 
@@ -460,37 +485,42 @@ article {
 	border: 3px solid red;
 	color: #000;
 	font-weight: bold;
-	-webkit-box-shadow: 4px 4px 13px 0px rgba(255, 0, 0, 0.3);
-	-moz-box-shadow:    4px 4px 13px 0px rgba(255, 0, 0, 0.3);
-	box-shadow:         4px 4px 13px 0px rgba(255, 0, 0, 0.3);
+	-webkit-box-shadow: 4px 4px 13px 0 rgba(255, 0, 0, 0.3);
+	-moz-box-shadow:    4px 4px 13px 0 rgba(255, 0, 0, 0.3);
+	box-shadow:         4px 4px 13px 0 rgba(255, 0, 0, 0.3);
+}
+
+span.alert {
+	background-color: #ff0;
+	border-bottom: 1px solid red;
+	color: #000;
+	font-weight: bold;
+	padding: 0 !important;
+	margin: 0 !important;
 }
 
 .note {
 	background-color: #ffc;
 	border: 3px dashed #eee;
 	color: #666;
+	padding: .5em;
+	margin: .5em;
 	font-weight: normal;
 	font-style: italic;
 	-webkit-border-radius: 1.2em;
 	-moz-border-radius: 1.2em;
 	border-radius: 1.2em;
-	-webkit-box-shadow: 4px 4px 13px 0px rgba(50, 50, 50, 0.3);
-	-moz-box-shadow:    4px 4px 13px 0px rgba(50, 50, 50, 0.3);
-	box-shadow:         4px 4px 13px 0px rgba(50, 50, 50, 0.3);
+	-webkit-box-shadow: 4px 4px 13px 0 rgba(50, 50, 50, 0.3);
+	-moz-box-shadow:    4px 4px 13px 0 rgba(50, 50, 50, 0.3);
+	box-shadow:         4px 4px 13px 0 rgba(50, 50, 50, 0.3);
 }
 
-span.note {
+span.note, li.note {
 	background-color: #ffc;
 	border: 0;
 	color: #000;
 	font-weight: normal;
 	font-style: normal;
-	-webkit-border-radius: 0;
-	-moz-border-radius: 0;
-	border-radius: 0;
-	-webkit-box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.0);
-	-moz-box-shadow:    0px 0px 0px 0px rgba(255, 255, 255, 0.0);
-	box-shadow:         0px 0px 0px 0px rgba(255, 255, 255, 0.0);
 }
 
 .announcement { /* for special announcements that expire */
@@ -536,7 +566,7 @@ p.reference:before {
 	-webkit-border-radius: 1.2em;
 	-moz-border-radius: 1.2em;
 	border-radius: 1.2em;
-	-webkit-box-shadow: 4px 4px 13px 0px rgba(50, 50, 50, 0.3);
-	-moz-box-shadow:    4px 4px 13px 0px rgba(50, 50, 50, 0.3);
-	box-shadow:         4px 4px 13px 0px rgba(50, 50, 50, 0.3);
+	-webkit-box-shadow: 4px 4px 13px 0 rgba(50, 50, 50, 0.3);
+	-moz-box-shadow:    4px 4px 13px 0 rgba(50, 50, 50, 0.3);
+	box-shadow:         4px 4px 13px 0 rgba(50, 50, 50, 0.3);
 }
